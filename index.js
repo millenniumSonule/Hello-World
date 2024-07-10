@@ -11,9 +11,13 @@ app.get("/users/api", (req, res) => {
 app.get('/users', (req, res) => {
   const html = `<ul> ${users.map((users) => `<li>${users.first_name}</li>`).join} </ul>`;
   res.send(html);
-})
+});
 
-
+app.get('/users/api/:id', (req,res) => {  // here : is used to indicate dynamic value
+  const id = Number(req.params.id);
+  const user = users.find((user) => user.id === id);
+  res.json(user);
+});
 
 
 
