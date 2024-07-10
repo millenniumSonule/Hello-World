@@ -10,7 +10,7 @@ app.get("/users/api", (req,res) => {
 
 app.get('/users', (req,res) => {
   
-  const html = `
+  const html = `d
     <ul> ${users.map((users) => `<li>${users.first_name}</li>`).join} </ul>
   `;
   res.send(html);
