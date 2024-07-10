@@ -13,7 +13,7 @@ app.get('/users', (req,res) => {
   const html = `
     <ul> ${users.map((users) => `<li>${users.first_name}</li>`).join} </ul>
   `;
-  res.send(html);z
+  res.send(html);
   
 })
 
