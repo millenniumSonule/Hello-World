@@ -19,6 +19,9 @@ app.get('/users/api/:id', (req,res) => {  // here : is used to indicate dynamic 
   res.json(user);
 });
 
+app.post('/users/api', (req, res) => {
+  return res.json({ status: "pending" });
+});
 
 
 app.listen(PORT, () => console.log(`Server running at port ${PORT}`));
